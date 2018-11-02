@@ -1,0 +1,5 @@
+# file detailing gender attribute
+g
+gender
+1
+male,female,unknown,unmarked

@@ -1,0 +1,14 @@
+# file detailing wound attribute
+w
+wounds
+-1
+blood,bruise,scar,unknown,unwounded,unmarked
+blood:unwounded
+bruise:unwounded
+scar:unwounded
+unknown:unwounded
+blood:unmarked
+bruise:unmarked
+scar:unmarked
+unknown:unmarked
+unwounded:unmarked

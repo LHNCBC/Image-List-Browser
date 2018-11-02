@@ -1,0 +1,5 @@
+# file detailing skintone attribute
+t
+skin tone
+1
+dark,light,unknown,unmarked

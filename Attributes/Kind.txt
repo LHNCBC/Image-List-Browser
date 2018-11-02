@@ -1,0 +1,5 @@
+# file detailing species/kind attribute
+k
+kind
+1
+cat,dog,horse,unknown,unmarked

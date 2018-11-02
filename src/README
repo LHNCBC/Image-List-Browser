@@ -1,0 +1,15 @@
+This is the source code for the ILB. 
+
+It includes
+
+1) fm - a package for interfacing with the FaceMatch library in concert with the 
+		c++ project FaceMatch/tools/FaceMatchJavaInterFace.
+2) ilb - a package for direct gui related code for ILB
+3) struct - package for the back-end dealing with most the data structures that 
+		support ILB's front-end
+4) tests - a few brief test cases for ILB. 
+5) License.txt - NLMs License for the ILB.
+
+		
+For further information on each package see the ImageListBrowser/Doc java doc 
+		files

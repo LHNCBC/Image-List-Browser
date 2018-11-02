@@ -1,0 +1,17 @@
+# file detailing occlusion attribute
+o
+occlusions
+-1
+glasses,sunglasses,patch,mustache,beard,unoccluded,unmarked,guess
+glasses:sunglasses
+glasses:unoccluded
+sunglasses:unoccluded
+patch:unoccluded
+mustache:unoccluded
+beard:unoccluded
+unmarked:unoccluded
+glasses:unmarked
+sunglasses:unmarked
+patch:unmarked
+mustache:unmarked
+beard:unmarked

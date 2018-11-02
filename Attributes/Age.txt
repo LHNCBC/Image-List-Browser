@@ -1,0 +1,5 @@
+# file detailing age attribute
+a
+age
+1
+adult,youth,unknown,unmarked

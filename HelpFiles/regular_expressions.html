@@ -1,0 +1,1155 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office"
+	xmlns:w="urn:schemas-microsoft-com:office:word"
+	xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+	xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="regular_expressions_files/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Bonifant, Michael (NIH/NLM/LHC) [E]</o:Author>
+  <o:LastAuthor>Bonifant, Michael (NIH/NLM/LHC) [E]</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2014-08-07T19:56:00Z</o:Created>
+  <o:LastSaved>2014-08-07T20:02:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>502</o:Words>
+  <o:Characters>2868</o:Characters>
+  <o:Lines>23</o:Lines>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>3364</o:CharactersWithSpaces>
+  <o:Version>14.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="regular_expressions_files/themedata.thmx">
+<link rel=colorSchemeMapping
+	href="regular_expressions_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>70</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SplitPgBreakAndParaMark/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]-->
+<!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!-- /* Font Definitions */
+@font-face {
+	font-family: "Cambria Math";
+	panose-1: 2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset: 1;
+	mso-generic-font-family: roman;
+	mso-font-format: other;
+	mso-font-pitch: variable;
+	mso-font-signature: 0 0 0 0 0 0;
+}
+
+@font-face {
+	font-family: Calibri;
+	panose-1: 2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset: 0;
+	mso-generic-font-family: swiss;
+	mso-font-pitch: variable;
+	mso-font-signature: -536870145 1073786111 1 0 415 0;
+}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal {
+	mso-style-unhide: no;
+	mso-style-qformat: yes;
+	mso-style-parent: "";
+	margin-top: 0in;
+	margin-right: 0in;
+	margin-bottom: 10.0pt;
+	margin-left: 0in;
+	line-height: 115%;
+	mso-pagination: widow-orphan;
+	font-size: 11.0pt;
+	font-family: "Calibri", "sans-serif";
+	mso-fareast-font-family: "Times New Roman";
+	mso-fareast-theme-font: minor-fareast;
+	mso-bidi-font-family: "Times New Roman";
+}
+
+a:link, span.MsoHyperlink {
+	mso-style-noshow: yes;
+	mso-style-priority: 99;
+	color: blue;
+	text-decoration: underline;
+	text-underline: single;
+}
+
+a:visited, span.MsoHyperlinkFollowed {
+	mso-style-noshow: yes;
+	mso-style-priority: 99;
+	color: purple;
+	text-decoration: underline;
+	text-underline: single;
+}
+
+p.msochpdefault, li.msochpdefault, div.msochpdefault {
+	mso-style-name: msochpdefault;
+	mso-style-unhide: no;
+	mso-margin-top-alt: auto;
+	margin-right: 0in;
+	mso-margin-bottom-alt: auto;
+	margin-left: 0in;
+	mso-pagination: widow-orphan;
+	font-size: 12.0pt;
+	font-family: "Calibri", "sans-serif";
+	mso-fareast-font-family: "Times New Roman";
+	mso-fareast-theme-font: minor-fareast;
+	mso-bidi-font-family: "Times New Roman";
+}
+
+p.msopapdefault, li.msopapdefault, div.msopapdefault {
+	mso-style-name: msopapdefault;
+	mso-style-unhide: no;
+	mso-margin-top-alt: auto;
+	margin-right: 0in;
+	margin-bottom: 10.0pt;
+	margin-left: 0in;
+	line-height: 115%;
+	mso-pagination: widow-orphan;
+	font-size: 12.0pt;
+	font-family: "Times New Roman", "serif";
+	mso-fareast-font-family: "Times New Roman";
+	mso-fareast-theme-font: minor-fareast;
+}
+
+span.SpellE {
+	mso-style-name: "";
+	mso-spl-e: yes;
+}
+
+span.GramE {
+	mso-style-name: "";
+	mso-gram-e: yes;
+}
+
+.MsoChpDefault {
+	mso-style-type: export-only;
+	mso-default-props: yes;
+	font-size: 10.0pt;
+	mso-ansi-font-size: 10.0pt;
+	mso-bidi-font-size: 10.0pt;
+	font-family: "Calibri", "sans-serif";
+	mso-ascii-font-family: Calibri;
+	mso-hansi-font-family: Calibri;
+}
+
+@page WordSection1 {
+	size: 8.5in 11.0in;
+	margin: 1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin: .5in;
+	mso-footer-margin: .5in;
+	mso-paper-source: 0;
+}
+
+div.WordSection1 {
+	page: WordSection1;
+}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";}
+</style>
+<![endif]-->
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]-->
+<!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval: .5in'>
+
+	<div class=WordSection1>
+
+		<p class=MsoNormal style='line-height: normal'>
+			<span style='font-size: 15.0pt'>Regular Expressions are
+				powerful tools in computer science used in parsing text into useful
+				information. Images can be sorted and grouped by their file name
+				with regular expressions. If an image matches a regular expression
+				it is grouped with others that match the expression. When wildcards
+				are used in the grouping section of the regular expression only
+				images with the same String in that section will be grouped
+				together. </span>
+		</p>
+
+		<p class=MsoNormal style='line-height: normal'>
+			<span style='font-size: 15.0pt'>For example the regular
+				expression “(<span class=SpellE>a|b|c</span>).*” checks the first
+				letter of each file’s name and groups those that start with “a”
+				together (ex: apple, agape, abloom), those that start with “b” (bye,
+				<span class=SpellE>by</span>, bed), and those that start with “c”
+				(cry, car, care). Any file that doesn’t match the expression is
+				grouped alone (dog, rat, flat).
+			</span>
+		</p>
+
+		<p class=MsoNormal style='line-height: normal'>
+			<span style='font-size: 15.0pt'>Below is a table summarizing
+				basic regular expression <span class=GramE>syntax.</span> For a full
+				list see <a
+				href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html</a>
+			</span>
+		</p>
+
+		<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+			style='border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-yfti-tbllook: 1184; mso-padding-alt: 0in 0in 0in 0in; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext'>
+			<tr style='mso-yfti-irow: 0; mso-yfti-firstrow: yes'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Regular Expression Syntax</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border: solid windowtext 1.0pt; border-left: none; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Effect</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border: solid windowtext 1.0pt; border-left: none; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Example pattern</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border: solid windowtext 1.0pt; border-left: none; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Example matches</span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 1'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>*</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Match the preceding
+							expression zero or more times. (This is a <i>greedy</i> operator
+							and will match the preceding expression as many times as
+							possible)
+						</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>A*</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>“”, A, AA, AAA, AAAA…</span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 2'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>+</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Match the preceding
+							expression one or more times. (This is a <i>greedy</i> operator
+							and will match the preceding expression as many times as it can)
+						</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>A+</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>A, AA, AAA, AAAA…</span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 3'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>?</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Match the preceding
+							expression zero or one times. Can be compounded with * or + to
+							make them <i>lazy, </i>so they match the preceding expression
+							only as many times as needed to ensure the regular expression
+							matches a file name.
+						</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span class=SpellE><span style='font-size: 15.0pt'>Colou?r</span></span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span class=SpellE><span style='font-size: 15.0pt'>R?s?m?at</span></span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>&nbsp;</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>&nbsp;</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>.*?/.*</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>&nbsp;</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>.+?/.*</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Color or <span class=SpellE>Colour</span></span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Rat, sat, mat, or at.</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>&nbsp;</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>&nbsp;</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>If the input were
+							“1/2/3/4/5”, then “.*?” &amp; “.*+” would both match “1”, without
+							“?” they’d match “1/2/3/4”</span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 4'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>{a}</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Matches the preceding
+							expression a times</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>A{4}</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Fire(5)</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>AAAA</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span class=SpellE><span style='font-size: 15.0pt'>fireeeee</span></span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 5'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>{<span class=SpellE>a,b</span>}
+						</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Matches the preceding
+							expression between a and b times</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>A{3,6}</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>AAA, AAAA, AAAAA, and
+							AAAAAA</span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 6'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>|</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Matches either the
+							preceding or the following expression</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span class=SpellE><span style='font-size: 15.0pt'>Males|females</span></span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span class=SpellE><span style='font-size: 15.0pt'>Cat|sat|Rat|fire</span></span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Males or females</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Cat or sat or Rat or fire</span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 7'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>(…)</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Matches whatever expression
+							is in the parenthesis and captures what’s inside for grouping
+							images. Can use additional sets of parenthesis to further narrow
+							down groups.</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>(<span class=SpellE>males|females</span>).*
+						</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>&nbsp;</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>&nbsp;</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>(.*)/(.*)/.*</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>males001/image.bmp -&gt;
+							goes to group “males”</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Females/001/image.jpg -&gt;
+							goes to group “females”</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>&nbsp;</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Males/001/image.jpg -&gt;
+							goes to group “Males-1”</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Fruit/apples/grannySmith.jpg
+							-&gt; goes to group “Fruit-apples”</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span class=SpellE><span style='font-size: 15.0pt'>Maths</span></span><span
+							style='font-size: 15.0pt'>/Fractals/KochSnowFlake.jpg
+							-&gt; “<span class=SpellE>Maths</span>-Fractals”
+						</span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 8'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>(?:…)</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Matches whatever expression
+							is in the parenthesis, but does not capture what’s inside for
+							grouping images.</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>(:?<span class=SpellE>males|females</span>)/(.*)/.
+						</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>males/01/image.jpg -&gt;
+							goes to group “1”</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>females/01/image.jpg-&gt;goes
+							to group “1”</span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 9'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>[…]</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Matches any of the
+							characters inside.</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>[<span class=SpellE>crs</span>]at
+						</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>[a-z]at</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>cat, rat, or sat</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span class=SpellE><span style='font-size: 15.0pt'>aat</span></span><span
+							style='font-size: 15.0pt'>, bat, cat….<span class=SpellE>xat</span>,
+							<span class=SpellE>yat</span>, <span class=SpellE>zat</span></span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 10'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>[^…]</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Matches anything but the
+							characters inside.</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>[^a-z]at</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>0at, 1at, 2at…<span
+							class=SpellE>Aat</span>, Bat, Cat…<span class=SpellE>Zat</span>…?at
+							… (but not <span class=SpellE>aat</span>, bat, cat…. or <span
+							class=SpellE>zat</span>)
+						</span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 11'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>.</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Matches any character</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>.</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span class=SpellE><span style='font-size: 15.0pt'>a,b,c,d,e,f,g,h</span></span><span
+							style='font-size: 15.0pt'>…A,B,C,D,E,…1,2,3,4…?,:,;,&gt;….</span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 12'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>\</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>The escape character, use
+							if to match characters that normally are used as syntax for
+							regular expressions </span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>\.</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>\[</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>\]</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>\(</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>\)</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>\\</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>.</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>[</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>]</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>(</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>)</span>
+					</p>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>\</span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 13'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>\d</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Matches numerals.
+							Effectively [0-9]</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>\d</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>0,1,2,3,4</span>
+					</p>
+				</td>
+			</tr>
+			<tr style='mso-yfti-irow: 14; mso-yfti-lastrow: yes'>
+				<td width=141 valign=top
+					style='width: 105.5pt; border: solid windowtext 1.0pt; border-top: none; mso-border-top-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>\D</span>
+					</p>
+				</td>
+				<td width=310 valign=top
+					style='width: 232.3pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>Matches anything not a
+							numeral. Effectively [^0-9]</span>
+					</p>
+				</td>
+				<td width=189 valign=top
+					style='width: 141.95pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span style='font-size: 15.0pt'>\D</span>
+					</p>
+				</td>
+				<td width=405 valign=top
+					style='width: 303.9pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; mso-border-top-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt'>
+					<p class=MsoNormal
+						style='margin-bottom: 0in; margin-bottom: .0001pt; line-height: normal'>
+						<span class=SpellE><span style='font-size: 15.0pt'>D<span
+								class=GramE>,g</span></span></span><span style='font-size: 15.0pt'>,?</span>
+					</p>
+				</td>
+			</tr>
+		</table>
+
+		<p class=MsoNormal style='line-height: normal'>&nbsp;</p>
+
+		<p class=MsoNormal>&nbsp;</p>
+
+	</div>
+
+</body>
+
+</html>
