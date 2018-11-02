@@ -1,8 +1,8 @@
-#Image List Browser (ILB)#
+# Image List Browser (ILB)
 
 The Image (List) Browser (referred to as ILB) is a Java-based tool for browsing and annotating local images. It was developed to allow creation of ground truth datasets for research on face matching algorithms. 
 
-##Features##
+## Features
 
 - View images from a directory in a gallery format (including larger directories with 10,000+ images rapidly).
 - Filter images with the aid of a list file (i.e. only view images that are on the list).
@@ -10,23 +10,23 @@ The Image (List) Browser (referred to as ILB) is a Java-based tool for browsing 
 - Sort images into sets based either on whole images, or on specific image annotations.
 - Make calls to an optional, separate in-house developed FaceMatch library to automatically detect and match faces.
 
-##Installation##
+## Installation
 
 The ILB is known to work with Java 8. (If your JRE does not include JavaFX, install it separately.) It requires jimObjModelImporterJFX.jar, a third-party Java library used for importing .obj 3D models into JavaFX for displaying a 3D head, which we provide here. If automatic face detection and face matching are desired, the following additional items are required: A compiled FaceMatch library (C++), a compiled FaceMatchJavaInterface library (C++), FaceMatch Models, and OpenCV 3.2. The FaceMatch components can be downloaded from [here](https://github.com/lhncbc/FaceMatch-1).
 
 To build it, compile the Java source files and place them in ILB.jar in the main directory. Run the ILB as follows:
 ```
-java ñjar ILB.jar:jimObjModelImporterJFX.jar ilb.Main 
+java ‚Äìjar ILB.jar:jimObjModelImporterJFX.jar ilb.Main 
 ```
 **Usage**
 
 Refer to Manual/ImageAnnotationGuide.docx for instructions on how to use the ILB, and to Manual/ListFileSyntax.docx document for the list file format.
 
-##License##
+## License
 
 Informational Notice:
 
-This software, the ìImage List Browser,î was developed under contract funded by the National Library of Medicine, which is part of the National Institutes of Health, an agency of the Department of Health and Human Services, United States Government.
+This software, the ‚ÄúImage List Browser,‚Äù was developed under contract funded by the National Library of Medicine, which is part of the National Institutes of Health, an agency of the Department of Health and Human Services, United States Government.
 
 The license of this software is an open-source BSD-like license.  It allows use in both commercial and non-commercial products.
 
@@ -34,7 +34,7 @@ The license does not supersede any applicable United States law.
 
 The license does not indemnify you from any claims brought by third parties whose proprietary rights may be infringed by your usage of this software.
 
-Government usage rights for this software are established by Federal law, which includes, but may not be limited to, Federal Acquisition Regulation (FAR) 48 C.F.R. Part 52.227-14, Rights in DataóGeneral.
+Government usage rights for this software are established by Federal law, which includes, but may not be limited to, Federal Acquisition Regulation (FAR) 48 C.F.R. Part 52.227-14, Rights in Data‚ÄîGeneral.
 The license for this software is intended to be expansive, rather than restrictive, in encouraging the use of this software in both commercial and non-commercial products.
 
 LICENSE:
